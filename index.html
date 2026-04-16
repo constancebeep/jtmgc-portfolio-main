@@ -369,6 +369,225 @@
     font-weight: 500;
     line-height: 1.6;
   }
+  .cs-proof {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--pink);
+  }
+  .cs-proof-label-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .cs-proof-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-weight: 500;
+  }
+  .cs-proof-line {
+    flex: 1;
+    height: 1px;
+    background: var(--pink);
+  }
+  .cs-proof-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .cs-proof-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: saturate(0.9);
+  }
+  .cs-proof-link:hover .cs-proof-img {
+    transform: scale(1.025);
+    filter: saturate(1);
+  }
+  .cs-proof-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 20px 16px;
+    background: linear-gradient(to top, rgba(74, 16, 32, 0.88) 0%, transparent 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .cs-proof-title {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    max-width: 70%;
+  }
+  .cs-proof-cta {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pink-mid);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.2s ease;
+  }
+  .cs-proof-link:hover .cs-proof-cta { gap: 8px; }
+
+  /* LISTINGS GALLERY */
+  .listings-row {
+    margin-top: 2px;
+    background: var(--white);
+    padding: 40px 48px;
+  }
+  .listings-row-label {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--dark);
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .listings-row-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--pink);
+  }
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .listing-img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 12px rgba(74, 16, 32, 0.08), 0 1px 3px rgba(0,0,0,0.06);
+    border: 1px solid var(--pink);
+  }
+  /* SOCIAL MEDIA MANAGEMENT */
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  /* GROWTH & ENGAGEMENT */
+  .growth-subtext {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 680px;
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    align-items: center;
+  }
+  .comparison-item { display: flex; flex-direction: column; gap: 10px; }
+  .comparison-img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 12px rgba(74, 16, 32, 0.08), 0 1px 3px rgba(0,0,0,0.06);
+    border: 1px solid var(--pink);
+  }
+  .comparison-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    padding-bottom: 28px;
+    color: var(--maroon);
+    opacity: 0.5;
+  }
+  .comparison-caption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .comparison-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .comparison-dot--before { background: var(--gray-light); }
+  .comparison-dot--after  { background: var(--maroon); }
+  .comparison-date {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-weight: 500;
+  }
+
+  /* PROOF SPLIT LAYOUT — Furnish Theory card only */
+  .cs-body--split {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+  }
+  .cs-text-col {
+    padding: 40px 40px 40px 48px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cs-text-col .cs-meta {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+  .cs-text-col .cs-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+  .cs-text-col .cs-result-block { grid-column: span 1; }
+  .cs-proof-col {
+    border-left: 1px solid var(--pink);
+    display: flex;
+    flex-direction: column;
+  }
+  .cs-proof-col .cs-proof {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .cs-proof-col .cs-proof-label-row {
+    padding: 16px 20px 12px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--pink);
+  }
+  .cs-proof-col .cs-proof-link {
+    flex: 1;
+    display: flex;
+  }
+  .cs-proof-col .cs-proof-img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    object-position: top center;
+  }
 
   /* TOOLS */
   #tools { background: var(--maroon); padding: 80px 48px; }
@@ -576,6 +795,14 @@
     .cs-meta { grid-template-columns: 1fr 1fr; }
     .cs-content { grid-template-columns: 1fr; }
     .cs-result-block { grid-column: span 1; }
+    .cs-body--split { grid-template-columns: 1fr; }
+    .cs-proof-col { border-left: none; border-top: 1px solid var(--pink); }
+    .cs-proof-col .cs-proof-img { min-height: 200px; height: 200px; }
+    .listings-row { padding: 32px 24px; }
+    .listings-grid { grid-template-columns: 1fr; gap: 12px; }
+    .social-grid { grid-template-columns: 1fr; gap: 12px; }
+    .comparison-grid { grid-template-columns: 1fr; gap: 20px; max-width: 100%; }
+    .comparison-arrow { transform: rotate(90deg); padding: 8px 0; padding-bottom: 8px; }
     .pillars { grid-template-columns: 1fr; gap: 0; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
     #tools { padding: 64px 24px; }
@@ -693,33 +920,50 @@
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:rgba(244,192,209,0.15);line-height:1;">01</div>
       </div>
-      <div class="cs-body">
-        <div class="cs-meta">
-          <div>
-            <p class="cs-meta-label">Duration</p>
-            <p class="cs-meta-value">Jan 2023 to Aug 2025</p>
+      <div class="cs-body cs-body--split">
+        <div class="cs-text-col">
+          <div class="cs-meta">
+            <div>
+              <p class="cs-meta-label">Duration</p>
+              <p class="cs-meta-value">Jan 2023 to Aug 2025</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Platforms</p>
+              <p class="cs-meta-value">Amazon, TikTok, Instagram, Facebook</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Role</p>
+              <p class="cs-meta-value">VA, Data Analyst, Content Writer</p>
+            </div>
           </div>
-          <div>
-            <p class="cs-meta-label">Platforms</p>
-            <p class="cs-meta-value">Amazon, TikTok, Instagram, Facebook</p>
-          </div>
-          <div>
-            <p class="cs-meta-label">Role</p>
-            <p class="cs-meta-value">VA, Data Analyst, Content Writer</p>
+          <div class="cs-content">
+            <div>
+              <p class="cs-block-label">Context</p>
+              <p class="cs-block-text">A luxury furniture company in Long Island, NY needed a multi-role VA to handle e-commerce operations, data management, content, social media, and business outreach simultaneously.</p>
+            </div>
+            <div>
+              <p class="cs-block-label">What I Did</p>
+              <p class="cs-block-text">Managed product listings across Amazon, Temu, TikTok Shop, Chairish, and APT Deco. Organized SKUs and built pivot tables to extract data from 1,300+ companies at Salone del Mobile 2024. Wrote and restructured the company blog for SEO. Managed daily social media engagement, scheduled posts, and ran keyword research via Ahrefs. Handled collaboration outreach via Instagram and Zendesk. Provided customer service on listing platforms and closed sales for qualified buyers.</p>
+            </div>
+            <div class="cs-result-block">
+              <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
+              <p class="cs-result-text">Delivered 2+ years of consistent, multi-function support across content, e-commerce, data, and outreach with no daily supervision required. Successfully gathered contact data from 1,300+ companies and established employer partnerships from multiple countries.</p>
+            </div>
           </div>
         </div>
-        <div class="cs-content">
-          <div>
-            <p class="cs-block-label">Context</p>
-            <p class="cs-block-text">A luxury furniture company in Long Island, NY needed a multi-role VA to handle e-commerce operations, data management, content, social media, and business outreach simultaneously.</p>
-          </div>
-          <div>
-            <p class="cs-block-label">What I Did</p>
-            <p class="cs-block-text">Managed product listings across Amazon, Temu, TikTok Shop, Chairish, and APT Deco. Organized SKUs and built pivot tables to extract data from 1,300+ companies at Salone del Mobile 2024. Wrote and restructured the company blog for SEO. Managed daily social media engagement, scheduled posts, and ran keyword research via Ahrefs. Handled collaboration outreach via Instagram and Zendesk. Provided customer service on listing platforms and closed sales for qualified buyers.</p>
-          </div>
-          <div class="cs-result-block">
-            <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
-            <p class="cs-result-text">Delivered 2+ years of consistent, multi-function support across content, e-commerce, data, and outreach with no daily supervision required. Successfully gathered contact data from 1,300+ companies and established employer partnerships from multiple countries.</p>
+        <div class="cs-proof-col">
+          <div class="cs-proof">
+            <div class="cs-proof-label-row">
+              <span class="cs-proof-eyebrow">Live Work Sample</span>
+              <span class="cs-proof-line"></span>
+            </div>
+            <a href="https://blog.furnishtheory.com/2021/10/12/origin-cesca-chair-marcel-breuer/" target="_blank" rel="noopener noreferrer" class="cs-proof-link">
+              <img src="/furnish-theory-blog.png" alt="Furnish Theory Blog — The Origin of the Cesca Chair" class="cs-proof-img">
+              <div class="cs-proof-overlay">
+                <span class="cs-proof-title">The Origin of the Cesca Chair by Marcel Breuer</span>
+                <span class="cs-proof-cta">Read Article <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -738,33 +982,50 @@
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:rgba(244,192,209,0.15);line-height:1;">02</div>
       </div>
-      <div class="cs-body">
-        <div class="cs-meta">
-          <div>
-            <p class="cs-meta-label">Locations</p>
-            <p class="cs-meta-value">Hillcrest · Woombye · Brisbane</p>
+      <div class="cs-body cs-body--split">
+        <div class="cs-text-col">
+          <div class="cs-meta">
+            <div>
+              <p class="cs-meta-label">Locations</p>
+              <p class="cs-meta-value">Hillcrest · Woombye · Brisbane</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Directories</p>
+              <p class="cs-meta-value">TrueLocal, Hotfrog, LocalSearch</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Focus</p>
+              <p class="cs-meta-value">Local Search Visibility</p>
+            </div>
           </div>
-          <div>
-            <p class="cs-meta-label">Directories</p>
-            <p class="cs-meta-value">TrueLocal, Hotfrog, LocalSearch</p>
-          </div>
-          <div>
-            <p class="cs-meta-label">Focus</p>
-            <p class="cs-meta-value">Local Search Visibility</p>
+          <div class="cs-content">
+            <div>
+              <p class="cs-block-label">Context</p>
+              <p class="cs-block-text">An Australian signage company needed stronger local search presence across 3 branch locations, with consistent business information across directories.</p>
+            </div>
+            <div>
+              <p class="cs-block-label">What I Did</p>
+              <p class="cs-block-text">Managed and updated 3 Google Business Profiles. Wrote location-based blog content. Built local SEO citations on TrueLocal, Hotfrog, and LocalSearch to ensure NAP consistency across all listings.</p>
+            </div>
+            <div class="cs-result-block">
+              <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
+              <p class="cs-result-text">Established a consistent local citation footprint across key Australian directories, supporting improved local search visibility for all 3 branch locations.</p>
+            </div>
           </div>
         </div>
-        <div class="cs-content">
-          <div>
-            <p class="cs-block-label">Context</p>
-            <p class="cs-block-text">An Australian signage company needed stronger local search presence across 3 branch locations, with consistent business information across directories.</p>
-          </div>
-          <div>
-            <p class="cs-block-label">What I Did</p>
-            <p class="cs-block-text">Managed and updated 3 Google Business Profiles. Wrote location-based blog content. Built local SEO citations on TrueLocal, Hotfrog, and LocalSearch to ensure NAP consistency across all listings.</p>
-          </div>
-          <div class="cs-result-block">
-            <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
-            <p class="cs-result-text">Established a consistent local citation footprint across key Australian directories, supporting improved local search visibility for all 3 branch locations.</p>
+        <div class="cs-proof-col">
+          <div class="cs-proof">
+            <div class="cs-proof-label-row">
+              <span class="cs-proof-eyebrow">Live Work Sample</span>
+              <span class="cs-proof-line"></span>
+            </div>
+            <a href="https://gigil.au/blog/professional-real-estate-print-partner-guide/" target="_blank" rel="noopener noreferrer" class="cs-proof-link">
+              <img src="/gigil-blog.png" alt="Gigil Signage Blog — Professional Real Estate Print Partner Guide" class="cs-proof-img">
+              <div class="cs-proof-overlay">
+                <span class="cs-proof-title">Professional Real Estate Print Partner Guide</span>
+                <span class="cs-proof-cta">Read Article <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -783,33 +1044,50 @@
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:rgba(244,192,209,0.15);line-height:1;">03</div>
       </div>
-      <div class="cs-body">
-        <div class="cs-meta">
-          <div>
-            <p class="cs-meta-label">Impressions</p>
-            <p class="cs-meta-value">2,000+ (Search Console)</p>
+      <div class="cs-body cs-body--split">
+        <div class="cs-text-col">
+          <div class="cs-meta">
+            <div>
+              <p class="cs-meta-label">Impressions</p>
+              <p class="cs-meta-value">2,000+ (Search Console)</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Deliverable</p>
+              <p class="cs-meta-value">Blog optimization + NAP</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Tool</p>
+              <p class="cs-meta-value">Google Search Console</p>
+            </div>
           </div>
-          <div>
-            <p class="cs-meta-label">Deliverable</p>
-            <p class="cs-meta-value">Blog optimization + NAP</p>
-          </div>
-          <div>
-            <p class="cs-meta-label">Tool</p>
-            <p class="cs-meta-value">Google Search Console</p>
+          <div class="cs-content">
+            <div>
+              <p class="cs-block-label">Context</p>
+              <p class="cs-block-text">A medical trading company needed blog content improved for readability and search performance, plus consistent business information across local directories.</p>
+            </div>
+            <div>
+              <p class="cs-block-label">What I Did</p>
+              <p class="cs-block-text">Edited and restructured multiple blog articles, improving headers, keyword placement, and readability. Also managed their Google Business Profile for NAP consistency and local visibility. Tracked performance via Google Search Console.</p>
+            </div>
+            <div class="cs-result-block">
+              <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
+              <p class="cs-result-text">Google Search Console data showed 2,000+ impressions, increased click-through rates, and a steady upward growth trend in organic traffic following optimization.</p>
+            </div>
           </div>
         </div>
-        <div class="cs-content">
-          <div>
-            <p class="cs-block-label">Context</p>
-            <p class="cs-block-text">A medical trading company needed blog content improved for readability and search performance, plus consistent business information across local directories.</p>
-          </div>
-          <div>
-            <p class="cs-block-label">What I Did</p>
-            <p class="cs-block-text">Edited and restructured multiple blog articles, improving headers, keyword placement, and readability. Also managed their Google Business Profile for NAP consistency and local visibility. Tracked performance via Google Search Console.</p>
-          </div>
-          <div class="cs-result-block">
-            <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
-            <p class="cs-result-text">Google Search Console data showed 2,000+ impressions, increased click-through rates, and a steady upward growth trend in organic traffic following optimization.</p>
+        <div class="cs-proof-col">
+          <div class="cs-proof">
+            <div class="cs-proof-label-row">
+              <span class="cs-proof-eyebrow">Live Work Sample</span>
+              <span class="cs-proof-line"></span>
+            </div>
+            <a href="https://biomedixph.com/blog/ultimate-guide-to-hematology-analyzers/" target="_blank" rel="noopener noreferrer" class="cs-proof-link">
+              <img src="/biomedix-blog.png" alt="Biomedix Systems Blog — Ultimate Guide to Hematology Analyzers" class="cs-proof-img">
+              <div class="cs-proof-overlay">
+                <span class="cs-proof-title">Ultimate Guide to Hematology Analyzers</span>
+                <span class="cs-proof-cta">Read Article <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -828,33 +1106,50 @@
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:rgba(244,192,209,0.15);line-height:1;">04</div>
       </div>
-      <div class="cs-body">
-        <div class="cs-meta">
-          <div>
-            <p class="cs-meta-label">Duration</p>
-            <p class="cs-meta-value">Apr 2024 to Jan 2025</p>
+      <div class="cs-body cs-body--split">
+        <div class="cs-text-col">
+          <div class="cs-meta">
+            <div>
+              <p class="cs-meta-label">Duration</p>
+              <p class="cs-meta-value">Apr 2024 to Jan 2025</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Platforms</p>
+              <p class="cs-meta-value">Meta, LinkedIn, GBP</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Type</p>
+              <p class="cs-meta-value">Part-time Agency VA</p>
+            </div>
           </div>
-          <div>
-            <p class="cs-meta-label">Platforms</p>
-            <p class="cs-meta-value">Meta, LinkedIn, GBP</p>
-          </div>
-          <div>
-            <p class="cs-meta-label">Type</p>
-            <p class="cs-meta-value">Part-time Agency VA</p>
+          <div class="cs-content">
+            <div>
+              <p class="cs-block-label">Context</p>
+              <p class="cs-block-text">A digital agency needed a reliable part-time VA to manage social media and SEO tasks across multiple client accounts simultaneously, including GBP management.</p>
+            </div>
+            <div>
+              <p class="cs-block-label">What I Did</p>
+              <p class="cs-block-text">Managed Google Business Profile for the agency itself, created and scheduled content for Meta and LinkedIn across client accounts, and optimized blog posts for keyword alignment and platform consistency.</p>
+            </div>
+            <div class="cs-result-block">
+              <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
+              <p class="cs-result-text">Delivered consistent multi-platform support across agency client accounts, enabling the team to maintain output and quality without full-time overhead or constant oversight.</p>
+            </div>
           </div>
         </div>
-        <div class="cs-content">
-          <div>
-            <p class="cs-block-label">Context</p>
-            <p class="cs-block-text">A digital agency needed a reliable part-time VA to manage social media and SEO tasks across multiple client accounts simultaneously, including GBP management.</p>
-          </div>
-          <div>
-            <p class="cs-block-label">What I Did</p>
-            <p class="cs-block-text">Managed Google Business Profile for the agency itself, created and scheduled content for Meta and LinkedIn across client accounts, and optimized blog posts for keyword alignment and platform consistency.</p>
-          </div>
-          <div class="cs-result-block">
-            <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
-            <p class="cs-result-text">Delivered consistent multi-platform support across agency client accounts, enabling the team to maintain output and quality without full-time overhead or constant oversight.</p>
+        <div class="cs-proof-col">
+          <div class="cs-proof">
+            <div class="cs-proof-label-row">
+              <span class="cs-proof-eyebrow">Live Work Sample</span>
+              <span class="cs-proof-line"></span>
+            </div>
+            <a href="https://worlddps-log.com" target="_blank" rel="noopener noreferrer" class="cs-proof-link">
+              <img src="/dps-content.png" alt="Digital Ninjas — Content Work Sample" class="cs-proof-img">
+              <div class="cs-proof-overlay">
+                <span class="cs-proof-title">Content &amp; Social Media Work</span>
+                <span class="cs-proof-cta">View Site <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -873,39 +1168,101 @@
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:rgba(244,192,209,0.15);line-height:1;">05</div>
       </div>
-      <div class="cs-body">
-        <div class="cs-meta">
-          <div>
-            <p class="cs-meta-label">Duration</p>
-            <p class="cs-meta-value">Apr 2021 to Oct 2021</p>
+      <div class="cs-body cs-body--split">
+        <div class="cs-text-col">
+          <div class="cs-meta">
+            <div>
+              <p class="cs-meta-label">Duration</p>
+              <p class="cs-meta-value">Apr 2021 to Oct 2021</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Deliverable</p>
+              <p class="cs-meta-value">40+ blog articles</p>
+            </div>
+            <div>
+              <p class="cs-meta-label">Type</p>
+              <p class="cs-meta-value">Ghost Editor</p>
+            </div>
           </div>
-          <div>
-            <p class="cs-meta-label">Deliverable</p>
-            <p class="cs-meta-value">40+ blog articles</p>
-          </div>
-          <div>
-            <p class="cs-meta-label">Type</p>
-            <p class="cs-meta-value">Ghost Editor</p>
+          <div class="cs-content">
+            <div>
+              <p class="cs-block-label">Context</p>
+              <p class="cs-block-text">A niche content site covering energy drinks needed consistent, well-structured articles edited and published to a regular schedule.</p>
+            </div>
+            <div>
+              <p class="cs-block-label">What I Did</p>
+              <p class="cs-block-text">Edited and contributed to 40+ blog articles, focusing on improving clarity, structure, flow, and content quality across every piece. This was the foundation of my content writing career.</p>
+            </div>
+            <div class="cs-result-block">
+              <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
+              <p class="cs-result-text">Delivered 40+ polished, publish-ready articles over 6 months. Established a consistent writing and editing process that carried forward into all subsequent content work.</p>
+            </div>
           </div>
         </div>
-        <div class="cs-content">
-          <div>
-            <p class="cs-block-label">Context</p>
-            <p class="cs-block-text">A niche content site covering energy drinks needed consistent, well-structured articles edited and published to a regular schedule.</p>
-          </div>
-          <div>
-            <p class="cs-block-label">What I Did</p>
-            <p class="cs-block-text">Edited and contributed to 40+ blog articles, focusing on improving clarity, structure, flow, and content quality across every piece. This was the foundation of my content writing career.</p>
-          </div>
-          <div class="cs-result-block">
-            <p class="cs-block-label" style="color:#4A1020;margin-bottom:6px;">Result</p>
-            <p class="cs-result-text">Delivered 40+ polished, publish-ready articles over 6 months. Established a consistent writing and editing process that carried forward into all subsequent content work.</p>
+        <div class="cs-proof-col">
+          <div class="cs-proof">
+            <div class="cs-proof-label-row">
+              <span class="cs-proof-eyebrow">Live Work Sample</span>
+              <span class="cs-proof-line"></span>
+            </div>
+            <a href="https://energydrinkhub.com/is-celsius-bad-for-you/" target="_blank" rel="noopener noreferrer" class="cs-proof-link">
+              <img src="/energy-drink-blog.png" alt="Energy Drink Hub Blog — Is Celsius Bad For You?" class="cs-proof-img">
+              <div class="cs-proof-overlay">
+                <span class="cs-proof-title">Is Celsius Bad For You?</span>
+                <span class="cs-proof-cta">Read Article <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
   </div>
+
+  <div class="listings-row">
+    <p class="listings-row-label">SEO Local Citations and Listings</p>
+    <div class="listings-grid">
+      <img src="/seo-listing-1.png" alt="SEO Local Citation Sample 1" class="listing-img">
+      <img src="/seo-listing-2.png" alt="SEO Local Citation Sample 2" class="listing-img">
+      <img src="/seo-listing-3.png" alt="SEO Local Citation Sample 3" class="listing-img">
+    </div>
+  </div>
+
+  <div class="listings-row">
+    <p class="listings-row-label">Social Media Management</p>
+    <div class="social-grid">
+      <img src="/social-media-1.png" alt="Social Media Management Sample 1" class="listing-img">
+      <img src="/social-media-2.png" alt="Social Media Management Sample 2" class="listing-img">
+    </div>
+  </div>
+
+  <div class="listings-row">
+    <p class="listings-row-label">Growth &amp; Engagement</p>
+    <p class="growth-subtext">From a standing start with zero paid promotion, this Instagram account was grown entirely through organic content strategy with consistent posting, audience-focused copy, and steady community engagement. The results below reflect what intentional, unsupported effort looks like over time.</p>
+    <div class="comparison-grid">
+      <div class="comparison-item">
+        <img src="/before.png" alt="Instagram account — July 2024" class="comparison-img">
+        <div class="comparison-caption">
+          <span class="comparison-dot comparison-dot--before"></span>
+          <span class="comparison-date">July 2024</span>
+        </div>
+      </div>
+      <div class="comparison-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <line x1="4" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <polyline points="22,10 34,20 22,30" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="comparison-item">
+        <img src="/after.png" alt="Instagram account — November 2025" class="comparison-img">
+        <div class="comparison-caption">
+          <span class="comparison-dot comparison-dot--after"></span>
+          <span class="comparison-date">November 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- TOOLS -->
