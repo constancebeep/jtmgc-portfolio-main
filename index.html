@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jun Therese Mae Gorres — General Virtual Assistant</title>
+<title>Jun Therese Mae Gorres | Online Presence Consultant</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%236B1A2A'/%3E%3Ctext x='32' y='40' font-size='24' text-anchor='middle' fill='%23FAE8EC' font-family='Georgia'%3EJT%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -146,6 +147,20 @@
     width: fit-content;
   }
   .hero-cta:hover { background: var(--pink-mid); transform: translateY(-2px); }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hero-cta.secondary {
+    background: transparent;
+    border: 1px solid rgba(250, 232, 236, 0.35);
+    color: var(--pink);
+  }
+  .hero-cta.secondary:hover {
+    background: rgba(250, 232, 236, 0.08);
+    border-color: var(--pink-mid);
+  }
 
   .hero-right {
     background: var(--pink);
@@ -638,6 +653,56 @@
     flex-shrink: 0;
   }
 
+  /* SERVICE OVERVIEW CTA */
+  .overview-cta {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    background: var(--maroon);
+    color: var(--pink);
+    padding: 32px;
+  }
+  .overview-kicker {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pink-warm);
+    margin-bottom: 8px;
+  }
+  .overview-title {
+    font-family: var(--serif);
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .overview-copy {
+    max-width: 640px;
+    color: rgba(250, 232, 236, 0.78);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .overview-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 22px;
+    background: var(--pink);
+    color: var(--maroon);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .overview-link:hover { background: var(--pink-mid); transform: translateY(-2px); }
+
   /* WHY ME */
   #about { background: var(--white); }
   .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
@@ -787,6 +852,7 @@
     .nav-links { display: none; }
     #hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 80px 24px 48px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
     .hero-right { min-height: 60vw; }
     .hero-photo-wrap { min-height: 300px; }
     section { padding: 64px 24px; }
@@ -803,6 +869,8 @@
     .social-grid { grid-template-columns: 1fr; gap: 12px; }
     .comparison-grid { grid-template-columns: 1fr; gap: 20px; max-width: 100%; }
     .comparison-arrow { transform: rotate(90deg); padding: 8px 0; padding-bottom: 8px; }
+    .overview-cta { grid-template-columns: 1fr; padding: 28px 24px; }
+    .overview-link { width: fit-content; white-space: normal; text-align: center; }
     .pillars { grid-template-columns: 1fr; gap: 0; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
     #tools { padding: 64px 24px; }
@@ -819,6 +887,7 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="proposal.html">Proposal</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -828,13 +897,16 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">General Virtual Assistant</p>
+    <p class="hero-eyebrow">Online Presence Consultant</p>
     <h1 class="hero-name">Therese<br>Mae</h1>
-    <p class="hero-title">Content Strategy · Local SEO · E-commerce Operations · Admin Support</p>
+    <p class="hero-title">Local SEO • Google Business Profile • Content • Social Media</p>
     <p class="hero-intro">
-      I keep businesses running behind the scenes. From <strong>content and social media</strong> to <strong>local SEO, e-commerce listings, and data operations</strong> — I handle the work independently so you can focus on growth.
+      I help small businesses improve how they show up online, from <strong>Google Business Profile and local SEO</strong> to <strong>content, social media, and visibility reporting</strong>.
     </p>
-    <a href="#work" class="hero-cta">See My Work</a>
+    <div class="hero-actions">
+      <a href="proposal.html" class="hero-cta">View Service Overview</a>
+      <a href="#work" class="hero-cta secondary">See My Work</a>
+    </div>
   </div>
   <div class="hero-right">
     <div class="hero-photo-wrap">
@@ -842,7 +914,7 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-num">3+</span>
+        <span class="hero-stat-num">4+</span>
         <span class="hero-stat-label">Years VA experience</span>
       </div>
       <div class="hero-stat">
@@ -860,43 +932,49 @@
 <!-- SERVICES -->
 <section id="services">
   <p class="section-label">What I Do</p>
-  <h2 class="section-title">Services</h2>
+  <h2 class="section-title">Online presence support</h2>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-number">01</div>
-      <h3 class="service-card-title">Content, SEO &amp; Social Media</h3>
+      <h3 class="service-card-title">Audit &amp; Google Business Profile</h3>
       <ul class="service-list">
-        <li>Blog writing, editing &amp; SEO optimization</li>
-        <li>Caption writing aligned to brand voice</li>
-        <li>Content scheduling &amp; trend research</li>
-        <li>Keyword research using Ahrefs</li>
-        <li>HTML product descriptions</li>
-        <li>Lead generation via social media &amp; email</li>
+        <li>Digital presence audit with clear next steps</li>
+        <li>Google Business Profile completeness review</li>
+        <li>Categories, services, photos, and descriptions</li>
+        <li>Review monitoring and profile updates</li>
+        <li>Local competitor overview</li>
       </ul>
     </div>
     <div class="service-card">
       <div class="service-number">02</div>
-      <h3 class="service-card-title">Local SEO &amp; Google Business</h3>
+      <h3 class="service-card-title">Local SEO &amp; Content</h3>
       <ul class="service-list">
-        <li>Google Business Profile management</li>
-        <li>Local citation building (NAP consistency)</li>
-        <li>On-page SEO optimization</li>
-        <li>Google Search Console monitoring</li>
-        <li>Location-based blog content</li>
+        <li>Local citation checks and cleanup</li>
+        <li>Service page copy and location content</li>
+        <li>Blog writing, editing, and SEO optimization</li>
+        <li>Keyword research using Ahrefs</li>
+        <li>Plain-English monthly progress notes</li>
       </ul>
     </div>
     <div class="service-card">
       <div class="service-number">03</div>
-      <h3 class="service-card-title">E-commerce &amp; Admin Support</h3>
+      <h3 class="service-card-title">Social Media, Reporting &amp; Admin</h3>
       <ul class="service-list">
-        <li>Product listing on Amazon, Temu, TikTok Shop, Chairish, APT Deco</li>
-        <li>SKU management &amp; data organization</li>
-        <li>Pivot tables &amp; data extraction</li>
-        <li>Customer service &amp; email outreach via Zendesk</li>
-        <li>File management &amp; reporting</li>
-        <li>Collaboration &amp; partnership outreach</li>
+        <li>Content planning, captions, and scheduling</li>
+        <li>Canva graphics and basic engagement support</li>
+        <li>Visibility reporting via Google Search Console</li>
+        <li>E-commerce listing and data organization support</li>
+        <li>File management, updates, and client communication</li>
       </ul>
     </div>
+  </div>
+  <div class="overview-cta">
+    <div>
+      <p class="overview-kicker">Service Overview</p>
+      <h3 class="overview-title">See how online presence support works.</h3>
+      <p class="overview-copy">A simple overview of the services, process, expectations, and next step for small businesses that want to show up better online.</p>
+    </div>
+    <a href="proposal.html" class="overview-link">View Service Overview</a>
   </div>
 </section>
 
@@ -1159,7 +1237,7 @@
       <div class="cs-sidebar">
         <div>
           <p class="cs-client">Energy Drink Hub</p>
-          <p class="cs-location">Remote</p>
+          <p class="cs-location">Australia</p>
           <div class="cs-tags">
             <span class="cs-tag">Ghost Editing</span>
             <span class="cs-tag">Content</span>
@@ -1254,10 +1332,10 @@
         </svg>
       </div>
       <div class="comparison-item">
-        <img src="/after.png" alt="Instagram account — November 2025" class="comparison-img">
+        <img src="/after.png" alt="Instagram account — November 2024" class="comparison-img">
         <div class="comparison-caption">
           <span class="comparison-dot comparison-dot--after"></span>
-          <span class="comparison-date">November 2025</span>
+          <span class="comparison-date">November 2024</span>
         </div>
       </div>
     </div>
@@ -1281,6 +1359,7 @@
         <li>Grammarly <span>Writing</span></li>
         <li>QuillBot <span>Writing</span></li>
         <li>Canva <span>Design</span></li>
+        <li>Flodesk <span>Newsletter</span></li>
       </ul>
     </div>
 
@@ -1291,14 +1370,20 @@
         <li>Google Business Profile <span>Local SEO</span></li>
         <li>LinkedIn Pages <span>Social Media</span></li>
         <li>TikTok Shop <span>E-commerce</span></li>
+        <li>MAXA Designs <span>Real Estate</span></li>
       </ul>
     </div>
 
     <div class="tools-col">
-      <h3 class="tools-col-header">E-commerce &amp; Data</h3>
+      <h3 class="tools-col-header">Real Estate, CRM &amp; Data</h3>
       <ul class="tools-list">
         <li>Amazon Seller <span>E-commerce</span></li>
         <li>Chairish / APT Deco <span>Marketplace</span></li>
+        <li>MLS Platforms <span>Listings</span></li>
+        <li>Zillow <span>Listings</span></li>
+        <li>Buffini CRM <span>CRM</span></li>
+        <li>BoldTrail <span>CRM</span></li>
+        <li>GoHighLevel <span>CRM</span></li>
         <li>Google Sheets <span>Data</span></li>
         <li>Smartsheet <span>Project Mgmt</span></li>
         <li>Zendesk <span>Support</span></li>
@@ -1306,8 +1391,13 @@
     </div>
 
     <div class="tools-col">
-      <h3 class="tools-col-header">Project Mgmt &amp; AI</h3>
+      <h3 class="tools-col-header">Admin, Project Mgmt &amp; AI</h3>
       <ul class="tools-list">
+        <li>Google Workspace <span>Admin</span></li>
+        <li>Gmail / Calendar <span>Scheduling</span></li>
+        <li>Microsoft Office <span>Admin</span></li>
+        <li>Slack <span>Communication</span></li>
+        <li>Monday.com <span>Project Mgmt</span></li>
         <li>Trello / Notion <span>Project Mgmt</span></li>
         <li>Taskade <span>AI Productivity</span></li>
         <li>ChatGPT <span>AI Assistant</span></li>
@@ -1322,22 +1412,22 @@
 <!-- WHY ME -->
 <section id="about">
   <p class="section-label">Why Work With Me</p>
-  <h2 class="section-title">What agencies<br>can count on</h2>
+  <h2 class="section-title">What small businesses<br>can count on</h2>
   <div class="pillars">
     <div class="pillar">
       <div class="pillar-num">01</div>
       <h3 class="pillar-title">Reliable</h3>
-      <p class="pillar-text">Furnish Theory trusted me with their platforms for over 2 years because I show up, meet deadlines, and maintain quality without needing to be chased. Consistency is the job.</p>
+      <p class="pillar-text">I show up consistently, meet deadlines, and keep online platforms maintained without needing to be chased. Steady work is what makes visibility improve over time.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">02</div>
-      <h3 class="pillar-title">Independent</h3>
-      <p class="pillar-text">I need direction once, not every day. Once I understand the brand and goals, I execute and flag issues before they become problems. Low maintenance, high output.</p>
+      <h3 class="pillar-title">Clear</h3>
+      <p class="pillar-text">You do not need to understand every SEO detail. I explain what matters in plain English, flag issues early, and make the next steps easy to follow.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">03</div>
       <h3 class="pillar-title">Organized</h3>
-      <p class="pillar-text">I track what I am working on, communicate clearly, and keep platforms consistent. You will always know where things stand. No chasing updates, no dropped balls.</p>
+      <p class="pillar-text">I track updates, keep business information consistent, and report what is improving so you always know where things stand.</p>
     </div>
   </div>
 </section>
@@ -1346,20 +1436,21 @@
 <section id="contact">
   <div class="contact-inner">
     <p class="contact-eyebrow">Let's Work Together</p>
-    <h2 class="contact-headline">Ready to take tasks off your plate?</h2>
-    <p class="contact-sub">Available for full-time or part-time remote roles. Based in Cagayan de Oro City, Philippines and working across time zones.</p>
+    <h2 class="contact-headline">Ready to improve how your business shows up online?</h2>
+    <p class="contact-sub">Start with a simple email. Tell me a little about your business, where you are based, and what you want help with.</p>
     <div class="contact-links">
-      <a href="mailto:theresemaegc@gmail.com" class="contact-link primary">Email Me</a>
+      <a href="mailto:theresemaegc@gmail.com?subject=Online%20presence%20support%20inquiry" class="contact-link primary">Email Me</a>
+      <a href="proposal.html" class="contact-link secondary">Service Overview</a>
+      <a href="https://wa.me/639758202672" target="_blank" rel="noopener" class="contact-link secondary">WhatsApp</a>
       <a href="https://www.linkedin.com/in/therese-maeg" target="_blank" rel="noopener" class="contact-link secondary">LinkedIn</a>
-      <a href="https://www.instagram.com/thesa_mgc/" target="_blank" rel="noopener" class="contact-link secondary">Instagram</a>
     </div>
-    <p class="contact-avail">Available · Cagayan de Oro City, Philippines · Open to full-time &amp; part-time</p>
+    <p class="contact-avail">Available | Philippines | Remote support for AU and US clients</p>
   </div>
 </section>
 
 <footer>
-  <span class="footer-name">Jun Therese Mae Gorres · General Virtual Assistant</span>
-  <span class="footer-note">Content · SEO · E-commerce · Admin</span>
+  <span class="footer-name">Jun Therese Mae Gorres | Online Presence Consultant</span>
+  <span class="footer-note">Local SEO • Google Business Profile • Content • Social Media</span>
 </footer>
 
 </body>
