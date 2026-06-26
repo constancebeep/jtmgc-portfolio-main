@@ -702,6 +702,21 @@
     transition: background 0.2s, transform 0.2s;
   }
   .overview-link:hover { background: var(--pink-mid); transform: translateY(-2px); }
+  .overview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .overview-link.secondary {
+    background: transparent;
+    border: 1px solid rgba(250, 232, 236, 0.4);
+    color: var(--pink);
+  }
+  .overview-link.secondary:hover {
+    background: rgba(250, 232, 236, 0.08);
+    border-color: var(--pink-mid);
+  }
 
   /* WHY ME */
   #about { background: var(--white); }
@@ -870,6 +885,7 @@
     .comparison-grid { grid-template-columns: 1fr; gap: 20px; max-width: 100%; }
     .comparison-arrow { transform: rotate(90deg); padding: 8px 0; padding-bottom: 8px; }
     .overview-cta { grid-template-columns: 1fr; padding: 28px 24px; }
+    .overview-actions { justify-content: flex-start; }
     .overview-link { width: fit-content; white-space: normal; text-align: center; }
     .pillars { grid-template-columns: 1fr; gap: 0; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
@@ -888,6 +904,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="proposal.html">Proposal</a></li>
+    <li><a href="/therese-gorres-portfolio.pdf" download>Portfolio PDF</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -906,6 +923,7 @@
     <div class="hero-actions">
       <a href="proposal.html" class="hero-cta">View Service Overview</a>
       <a href="#work" class="hero-cta secondary">See My Work</a>
+      <a href="/therese-gorres-portfolio.pdf" class="hero-cta secondary" download>Download Portfolio</a>
     </div>
   </div>
   <div class="hero-right">
@@ -974,7 +992,10 @@
       <h3 class="overview-title">See how online presence support works.</h3>
       <p class="overview-copy">A simple overview of the services, process, expectations, and next step for small businesses that want to show up better online.</p>
     </div>
-    <a href="proposal.html" class="overview-link">View Service Overview</a>
+    <div class="overview-actions">
+      <a href="proposal.html" class="overview-link">View Service Overview</a>
+      <a href="/therese-gorres-portfolio.pdf" class="overview-link secondary" download>Download Portfolio</a>
+    </div>
   </div>
 </section>
 
@@ -1441,6 +1462,7 @@
     <div class="contact-links">
       <a href="mailto:theresemaegc@gmail.com?subject=Online%20presence%20support%20inquiry" class="contact-link primary">Email Me</a>
       <a href="proposal.html" class="contact-link secondary">Service Overview</a>
+      <a href="/therese-gorres-portfolio.pdf" class="contact-link secondary" download>Portfolio PDF</a>
       <a href="https://wa.me/639758202672" target="_blank" rel="noopener" class="contact-link secondary">WhatsApp</a>
       <a href="https://www.linkedin.com/in/therese-maeg" target="_blank" rel="noopener" class="contact-link secondary">LinkedIn</a>
     </div>
